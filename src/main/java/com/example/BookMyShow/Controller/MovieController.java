@@ -31,6 +31,7 @@ public class MovieController {
         return new ResponseEntity<>(movie, HttpStatus.CREATED);
     }
 
+    //    Get Api to get the All the movies from the Database
     @GetMapping("/get-all-movie")
     public ResponseEntity<List<MovieResponseDto>> getAllMovies() {
         List<MovieResponseDto> movie = movieService.getAllMovies();
