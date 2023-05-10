@@ -17,6 +17,7 @@ public class MovieController {
     @Autowired
     MovieServiceImpl movieService;
 
+//    Post Api to add the new movie to the repository
     @PostMapping("/add")
     public ResponseEntity<MovieResponseDto> addMovie(@RequestBody() MovieEntryDto movieEntryDto) {
         MovieResponseDto movie = movieService.addMovie(movieEntryDto);
